@@ -1,9 +1,21 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby + Node.js API`,
-      siteUrl: `https://gatsby-template.vercel.app`,
+    title: `franz.codes`,
+      siteUrl: `https://franz.codes`,
   },
   plugins: [
+    'gatsby-plugin-postcss',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
 
+  `gatsby-plugin-mdx`,
+  'gatsby-plugin-mdx-frontmatter',
+  'gatsby-plugin-image',
+  'gatsby-plugin-sharp'
   ]
 }
