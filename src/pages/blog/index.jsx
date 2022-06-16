@@ -1,11 +1,12 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
 import Layout from '../../components/Layout';
+import { graphql, Link } from 'gatsby';
 
 const Blog = ({ data }) => {
   return (
     <Layout>
       blog
+        {data.allMdx.totalCount} posts
       {
         data.allMdx.nodes.map(node => (
           <article key={node.id}>
@@ -33,6 +34,7 @@ export const query = graphql`
         id
         slug
       }
+      totalCount
     }
   }
   `

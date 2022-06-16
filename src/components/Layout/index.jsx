@@ -4,7 +4,7 @@ import ContentContainer from '../ContentContainer';
 
 function Layout({ children }) {
   return (
-    <div className="flex ">
+    <div className="flex">
       <SideBar />
       <ContentContainer>  
           {children}

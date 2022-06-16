@@ -15,7 +15,14 @@ module.exports = {
 
   `gatsby-plugin-mdx`,
   'gatsby-plugin-mdx-frontmatter',
-  'gatsby-plugin-image',
-  'gatsby-plugin-sharp'
+  'gatsby-remark-reading-time',
+  /*'gatsby-plugin-image',
+  'gatsby-plugin-sharp',*/
+  {
+    resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -105
+      }
+  }
   ]
 }

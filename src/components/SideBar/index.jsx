@@ -3,57 +3,57 @@ import { BsFillLightningFill } from 'react-icons/bs';
 import { AiFillNotification } from 'react-icons/ai';
 import { FaUserCircle, FaMoon, FaSun } from 'react-icons/fa';
 import useDarkMode from '../../hooks/useDarkMode';
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image'
+import io from '../../images/io.jpg';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
-const SideBar = () => {
+const SideBar = () => { 
   return (
-    <div className="fixed top-0 left-0 h-screen w-16 flex flex-col bg-white dark:bg-gray-900 shadow-lg">          
-      <SideBarIcon icon={<StaticImage src='../../images/io.jpg' alt={"io"} className="sidebar-icon"/>} text="me" linko="/"/>
+    <div className="sidebar">          
+      <SideBarIcon icon={<img src={ io } alt={"io"} className="sidebar-icon" />} text="me" link="/#page-top"/>
       <Divider />
-      <SideBarIcon icon={<BsFillLightningFill size="20" />} text="work" linko="/work"/>
-      <SideBarIcon icon={<AiFillNotification size="20" />} text="blog" linko="/blog"/>
-      <SideBarIcon icon={<FaUserCircle size="22" />} text="contact" linko="/contact"/>
+      <SideBarIcon icon={<AiFillNotification size="20" />} text="blog" link="/#blog"/>
+      <SideBarIcon icon={<BsFillLightningFill size="20" />} text="projects" link="/#projects"/>
+      <SideBarIcon icon={<FaUserCircle size="22" />} text="contact" link="/#contact"/>
       <Divider />
       <ThemeIcon />
     </div>
   );
 };
 
-const SideBarIcon = ({ icon, text, linko }) => (
-  <Link to={ linko } className="sidebar-icon group" activeClassName="sidebar-icon-active group">
+const SideBarIcon = ({ icon, text, link }) => (
+  <AnchorLink to={ link } className="sidebar-icon group"  >
     {icon}
     <span className="sidebar-tooltip group-hover:scale-100">
       {text}
     </span>
-  </Link>
+  </AnchorLink>
 );
 
 const ThemeIcon = () => {
   const [darkTheme, setDarkTheme] = useDarkMode();
   const handleMode = () => setDarkTheme(!darkTheme);
   return (
-    <span onClick={handleMode}>
+    <span onClick={handleMode} className="sidebar-icon group">
       {darkTheme ? (
-        <div className="sidebar-icon group">
+        <>
           <FaSun size='20'/>
           <span className="sidebar-tooltip group-hover:scale-100">
             light mode
           </span>
-        </div>
+        </>
       ) : (
-        <div className="sidebar-icon group">
+        <>
           <FaMoon size='20'/>
           <span className="sidebar-tooltip group-hover:scale-100">
             dark mode
           </span>
-        </div>
+        </>
       )}
     </span>
   );
 };
 
 
-const Divider = () => <hr className="sidebar-hr" />;
+const Divider = () => <span className="sidebar-hr" />;
 
 export default SideBar;

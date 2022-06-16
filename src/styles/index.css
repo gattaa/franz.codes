@@ -10,34 +10,38 @@
 }
 
 @layer components {
+  .sidebar {
+    @apply fixed top-0 left-0 w-screen h-16 flex flex-row bg-white dark:bg-gray-900 shadow-lg z-10;
+  }
+
   .sidebar-icon {
     @apply relative flex items-center justify-center 
-    h-12 w-12 mt-2 mb-2 mx-auto  
+    h-12 w-12 ml-2 mr-2 my-auto
   bg-gray-400 hover:bg-purple-600 dark:bg-gray-800 
   text-purple-500 hover:text-white
-    hover:rounded-xl rounded-3xl
+    hover:rounded-xl rounded-3xl dark:hover:rounded-xl
     transition-all duration-300 ease-linear
     cursor-pointer shadow-lg ;
   }
 
   .sidebar-icon-active {
     @apply relative flex items-center justify-center 
-    h-12 w-12 mt-2 mb-2 mx-auto  
+    h-12 w-12 ml-2 mr-2  my-auto
   bg-purple-600 dark:bg-gray-800 
   text-white ;
   }
 
   .sidebar-tooltip {
-    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md
+    @apply absolute w-auto p-2 m-2 min-w-max rounded-md shadow-md
     text-white bg-gray-900 
     text-xs font-bold 
-    transition-all duration-100 scale-0 origin-left;
+    transition-all duration-100 scale-0 origin-center;
   }
 
   .sidebar-hr {
     @apply bg-gray-200 dark:bg-gray-800 
-    border border-gray-200 dark:border-gray-800 rounded-full
-    mx-2;
+    border-l-2 border-gray-200 dark:border-gray-800 rounded-full
+    my-2 mx-2;
   }
   
   .me-link {
@@ -45,58 +49,11 @@
     transition-all duration-300 ease-in-out 
   }
 
-  .top-navigation {
-    @apply fixed flex flex-row items-center justify-evenly 
-    bg-gray-300 dark:bg-gray-900 bg-opacity-90 
-    w-full h-16 
-    m-0 ml-16 pl-2
-    shadow-lg;
-  }
-
-  .top-navigation-icon {
-    @apply text-gray-500
-    mr-3 ml-4
-    transition duration-300 ease-in-out 
-    hover:text-purple-600 
-    cursor-pointer;
-  }
-
-  .top-navigation-icon:first {
-    @apply ml-auto mr-4;
-  }
-
-  .title-hashtag {
-    @apply text-lg tracking-wider font-semibold text-gray-500 
-    ml-2 my-auto;
-  }
-
-  .title-text {
-    @apply text-xl text-gray-500 tracking-wider font-semibold text-opacity-80 
-    ml-2 my-auto 
-    transition duration-300 ease-in-out;
-  }
-
-  .search {
-    @apply w-1/5 flex items-center justify-start 
-    bg-gray-400 dark:bg-gray-600
-    text-gray-500
-    px-2 h-9 ml-0 mr-0 
-    rounded-md shadow-md
-    transition duration-300 ease-in-out;
-  }
-
-  .search-input {
-    @apply w-full font-sans font-semibold
-    bg-transparent outline-none 
-    text-gray-500  placeholder-gray-500
-    pl-1 rounded;
-  }
-
   .content-container {
-    @apply flex flex-col 
-    bg-gray-300 dark:bg-gray-700
+    @apply
+    bg-gray-300 dark:bg-gray-900
     m-0 
-    h-full w-full 
+    h-full w-full
     overflow-hidden;
   }
 
