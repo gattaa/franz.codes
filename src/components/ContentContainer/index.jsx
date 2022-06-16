@@ -4,7 +4,7 @@ import React from 'react';
 
 const ContentContainer = ({ children }) => {
   return (
-    <div className='content-container h-[200rem] px-20'>
+    <div className='content-container h-[200rem] '>
       {children}
     </div>
   );

@@ -23,6 +23,7 @@ module.exports = {
       options: {
         offset: -105
       }
-  }
+  },
+  `gatsby-plugin-react-helmet`
   ]
 }

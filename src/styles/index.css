@@ -52,12 +52,11 @@
   .content-container {
     @apply
     bg-gray-300 dark:bg-gray-900
-    m-0 
-    h-full w-full
-    overflow-hidden;
+    m-0 px-2 md:px-20 overflow-hidden
+    h-full w-full;
   }
 
-  .content-list {
+  .content-list {  
     @apply flex flex-col items-center 
     h-full w-full 
     mt-0 ml-0 mx-auto px-0 pb-12 
