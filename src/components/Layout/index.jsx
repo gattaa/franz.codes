@@ -13,7 +13,9 @@ function Layout({ children }) {
         </Helmet>
       <SideBar />
       <ContentContainer>  
+        <div class="wotfard">
           {children}
+        </div>
       </ContentContainer>
     </div>
   );

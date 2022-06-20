@@ -1,7 +1,9 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { MDXRenderer, MDXProvider } from 'gatsby-plugin-mdx'
+import { MDXProvider } from '@mdx-js/react'
 import Layout from '../../components/Layout'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+
 
 
 const Comments = props => {
@@ -27,29 +29,40 @@ const Comments = props => {
   )
 }
 
-//TODO: https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxrenderer
+const H1 = props => <p className='text-4xl dark:text-white' {...props} />
+const P = props => (
+  <p className='dark:text-white' {...props} />
+)
+
+const components = {
+  h1: H1,
+  p: P,
+}
 
 
 const BlogPost = ({ data }) => {
   const post = data.mdx
     return (
       <Layout >
-        <div className="flex flex-col flex-grow text-center pt-20 dark:text-gray-300" id="blog">
+        <div className="flex flex-col flex-grow text-center pt-20 dark:text-gray-100" id="blog">
           <div className=''>
-            <p className="text-gray-500 dark:text-slate-200 lowercase">{post.frontmatter.date} - {post.fields.readingTime.minutes} min read</p>
-            <p className=' text-3xl font-bold'>{post.frontmatter.title}</p>
-            <p>{post.frontmatter.description}</p>
+            <p className=' text-7xl font-bold dark:text-white'>{post.frontmatter.title}</p>
+            <p className='text-3xl'>{post.frontmatter.description}</p>
+            <p className="text-gray-500 dark:text-white lowercase mt-2">{post.frontmatter.date} - {post.fields.readingTime.minutes} min read</p>
           </div>
           <div className="pt-5">
-            <MDXRenderer >
-              {post.body}
-            </MDXRenderer>
+          <MDXProvider components={ components }> 
+            <MDXRenderer>{post.body}</MDXRenderer>
+          </MDXProvider>
           </div>
           <Comments />
         </div>
       </Layout>
     )
 }
+
+//TODO: post before and post after buttons
+
 
 export const query = graphql`
   query ($id: String) {

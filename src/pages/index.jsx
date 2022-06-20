@@ -5,6 +5,7 @@ import { graphql, Link } from "gatsby";
 import Typewriter from 'typewriter-effect';
 import BlogList from '../components/BlogList'
 import { RoughNotation } from "react-rough-notation"
+import { BiChevronsDown } from 'react-icons/bi';
 
 const Index = ({ data }) => {
   const [hover, setHover] = React.useState(false)
@@ -18,19 +19,23 @@ const Index = ({ data }) => {
               strings: ['fraaaaaaaanz', 'franz'],
               autoStart: true,
               loop: true,
-              cursor: ""
+              cursor: "|"
             }}
           /></p>
-          <RoughNotation className="inline-flex" type="circle" color="purple" show={hover} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}><p className='text-2xl dark:text-white'>do i actually code tho</p></RoughNotation>
+          <RoughNotation className="inline-flex" type="crossed-off" color="purple" show={hover} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}><p className='text-2xl dark:text-white'>do i actually code tho</p></RoughNotation>
           <div className="mt-1">
             <a href="https://github.com/gattaa" target={"_blank"} rel="noreferrer">
               <FaGithub size="25" className='me-link'/>
             </a>
           </div>
+          <div className='absolute left-[50%] pb-10 bottom-0 animate-bounce text-white' style={{"transform": "translate(-50%, 0);"}}>
+            <BiChevronsDown size="50"/>
+          </div>
         </div>
+
        
       </div>
-      <div className="content-center flex-grow place-self-center " id="blog">
+      <div className="content-center flex-grow place-self-center pt-10" id="blog">
         <BlogList data={ data } />
       </div>
     </Layout>
