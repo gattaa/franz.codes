@@ -8,9 +8,12 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const Comments = props => {
   const commentsRef = React.useRef(null)
-  const theme = window.localStorage.getItem("dark-theme");
+  if (typeof window !== "undefined") {
+    const theme = window.localStorage.getItem("dark-theme");
+  }
+  const utterancesTheme = theme === "true" ? "github-dark" : "github-light"
   React.useEffect(() => {
-    const utterancesTheme = theme === "true" ? "github-dark" : "github-light"
+    
     const scriptElement = document.createElement("script")
     scriptElement.setAttribute("src", "https://utteranc.es/client.js")
     scriptElement.setAttribute("crossorigin", "anonymous")
