@@ -8,24 +8,24 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const Comments = props => {
   const commentsRef = React.useRef(null)
-  if (typeof window !== "undefined") {
-    const theme = window.localStorage.getItem("dark-theme");
-  }
-  const utterancesTheme = theme === "true" ? "github-dark" : "github-light"
+
   React.useEffect(() => {
-    
-    const scriptElement = document.createElement("script")
-    scriptElement.setAttribute("src", "https://utteranc.es/client.js")
-    scriptElement.setAttribute("crossorigin", "anonymous")
-    scriptElement.setAttribute("async", true)
-    scriptElement.setAttribute("repo", "gattaa/franz.codes")
-    scriptElement.setAttribute("issue-term", "pathname")
-    scriptElement.setAttribute("theme", utterancesTheme)
-    while (commentsRef.current.firstChild) {
-      commentsRef.current.firstChild.remove()
+    if (typeof window !== "undefined") {
+      const theme = window.localStorage.getItem("dark-theme");
+      const utterancesTheme = theme === "true" ? "github-dark" : "github-light"
+      const scriptElement = document.createElement("script")
+      scriptElement.setAttribute("src", "https://utteranc.es/client.js")
+      scriptElement.setAttribute("crossorigin", "anonymous")
+      scriptElement.setAttribute("async", true)
+      scriptElement.setAttribute("repo", "gattaa/franz.codes")
+      scriptElement.setAttribute("issue-term", "pathname")
+      scriptElement.setAttribute("theme", utterancesTheme)
+      while (commentsRef.current.firstChild) {
+        commentsRef.current.firstChild.remove()
+      }
+      commentsRef.current.appendChild(scriptElement)
     }
-    commentsRef.current.appendChild(scriptElement)
-  }, [theme])
+  })
   return (
     <div ref={commentsRef} id="comments" ></div>
   )

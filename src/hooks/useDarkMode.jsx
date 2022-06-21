@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 
 const useLocalStorage = (key, initialValue) => {
   const [storedValue, setStoredValue] = useState(() => {
-    try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      console.log(error);
-      return initialValue;
+    if(typeof window !== "undefined"){
+      try {
+        const item = window.localStorage.getItem(key);
+        return item ? JSON.parse(item) : initialValue;
+      } catch (error) {
+        console.log(error);
+        return initialValue;
+      }
     }
   });
 
@@ -30,14 +32,12 @@ const useDarkMode = () => {
   const isEnabled = typeof enabledState === 'undefined' && enabled;
 
   useEffect(() => {
-    if(typeof window == "undefined"){
-    }else{
+    if(typeof window !== "undefined"){
       const className = 'dark';
       const bodyClass = window.document.body.classList;
 
       isEnabled ? bodyClass.add(className) : bodyClass.remove(className);
     }
-
   }, [enabled, isEnabled]);
 
   return [enabled, setEnabled];
