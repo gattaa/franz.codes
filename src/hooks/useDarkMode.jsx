@@ -26,12 +26,11 @@ const useLocalStorage = (key, initialValue) => {
 };
 
 const useDarkMode = () => {
-  const isBrowser = typeof window !== "undefined"
   const [enabled, setEnabled] = useLocalStorage('dark-theme');
   const isEnabled = typeof enabledState === 'undefined' && enabled;
 
   useEffect(() => {
-    if(!isBrowser){
+    if(typeof window == "undefined"){
     }else{
       const className = 'dark';
       const bodyClass = window.document.body.classList;

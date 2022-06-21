@@ -8,7 +8,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const SideBar = () => { 
   return (
-    <div className="sidebar">          
+    <div className="sidebar" role="navigation">          
       <SideBarIcon icon={<img src={ io } alt={"io"} className="sidebar-icon" />} text="me" link="/#page-top"/>
       <Divider />
       <SideBarIcon icon={<AiFillNotification size="20" />} text="blog" link="/#blog"/>

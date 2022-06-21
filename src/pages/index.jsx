@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import { FaGithub } from 'react-icons/fa';
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Typewriter from 'typewriter-effect';
 import BlogList from '../components/BlogList'
 import { RoughNotation } from "react-rough-notation"
@@ -22,13 +22,14 @@ const Index = ({ data }) => {
               cursor: "|"
             }}
           /></p>
-          <RoughNotation className="inline-flex" type="crossed-off" color="purple" show={hover} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}><p className='text-2xl dark:text-white'>do i actually code tho</p></RoughNotation>
+          <RoughNotation className="inline-flex" type="crossed-off" color="purple" strokeWidth="3" show={hover} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}><p className='text-2xl dark:text-white'>do i actually code tho</p></RoughNotation>
           <div className="mt-1">
             <a href="https://github.com/gattaa" target={"_blank"} rel="noreferrer">
               <FaGithub size="25" className='me-link'/>
             </a>
           </div>
-          <div className='absolute left-[50%] pb-10 bottom-0 animate-bounce text-white' style={{"transform": "translate(-50%, 0);"}}>
+   
+          <div className='absolute left-[48%] pb-10 bottom-0 animate-bounce dark:text-white' >
             <BiChevronsDown size="50"/>
           </div>
         </div>

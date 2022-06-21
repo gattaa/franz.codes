@@ -52,7 +52,7 @@
   .content-container {
     @apply
     bg-gray-300 dark:bg-gray-900
-    m-0 px-2 md:px-20 overflow-hidden
+    m-0 px-4 md:px-20 overflow-hidden
     h-full w-full;
   }
 
