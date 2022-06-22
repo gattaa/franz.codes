@@ -31,13 +31,16 @@ const Comments = props => {
   )
 }
 
-const H1 = props => <p className='text-4xl dark:text-white' {...props} />
-const P = props => (
-  <p className='dark:text-white' {...props} />
-)
+const H1 = props => <p className='text-4xl text-white' {...props} />
+const P = props => <p className='text-white' {...props} />
+const H2 = props => <p className='text-white text-3xl'/>
+const H3 = props => <p className='text-2xl text-white' {...props} />
+
 
 const components = {
   h1: H1,
+  h2: H2,
+  h3: H3,
   p: P,
 }
 
@@ -46,16 +49,23 @@ const BlogPost = ({ data }) => {
   const post = data.mdx
     return (
       <Layout >
-        <div className="flex flex-col flex-grow text-center pt-20 dark:text-gray-100" id="blog">
+        <div className="flex flex-col flex-grow text-center pt-20 text-gray-100" id="blog">
           <div className=''>
-            <p className=' text-7xl font-bold dark:text-white'>{post.frontmatter.title}</p>
+            <p className=' text-7xl font-bold text-white'>{post.frontmatter.title}</p>
             <p className='text-3xl'>{post.frontmatter.description}</p>
-            <p className="text-gray-500 dark:text-white lowercase mt-2">{post.frontmatter.date} - {post.fields.readingTime.minutes} min read</p>
+            <p className="text-white lowercase mt-2">{post.frontmatter.date} - {post.fields.readingTime.minutes} min read</p>
           </div>
+          <hr className='mt-4 mx-[30%] border-gray-100 '/>
           <div className="pt-5">
           <MDXProvider components={ components }> 
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXProvider>
+          </div>
+          <div className="flex justify-center">
+            <footer className="grid grid-cols-2 gap-x-3 mt-20 w-full md:w-[65%] lg:w-[45%]">
+              {/*<button className="btn-blog">...</button>
+              <button className="btn-blog">HH</button>*/}
+            </footer>
           </div>
           <Comments />
         </div>

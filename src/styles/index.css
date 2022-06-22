@@ -11,15 +11,15 @@
 
 @layer components {
   .sidebar {
-    @apply fixed top-0 left-0 w-screen h-16 flex flex-row bg-white dark:bg-gray-900 shadow-lg z-10;
+    @apply fixed top-0 left-0 w-screen h-16 flex flex-row bg-gray-900 shadow-lg z-10;
   }
 
   .sidebar-icon {
     @apply relative flex items-center justify-center 
     h-12 w-12 ml-2 mr-2 my-auto
-  bg-gray-400 hover:bg-purple-600 dark:bg-gray-800 
+  hover:bg-purple-600 bg-gray-800 
   text-purple-500 hover:text-white
-    hover:rounded-xl rounded-3xl dark:hover:rounded-xl
+    hover:rounded-xl rounded-3xl 
     transition-all duration-300 ease-linear
     cursor-pointer shadow-lg ;
   }
@@ -27,7 +27,7 @@
   .sidebar-icon-active {
     @apply relative flex items-center justify-center 
     h-12 w-12 ml-2 mr-2  my-auto
-  bg-purple-600 dark:bg-gray-800 
+  bg-gray-800 
   text-white ;
   }
 
@@ -39,19 +39,19 @@
   }
 
   .sidebar-hr {
-    @apply bg-gray-200 dark:bg-gray-800 
-    border-l-2 border-gray-200 dark:border-gray-800 rounded-full
+    @apply bg-gray-800 
+    border-l-2 border-gray-800 rounded-full
     my-2 mx-2;
   }
   
   .me-link {
-    @apply  text-black hover:text-purple-600 dark:text-white dark:hover:text-purple-600
+    @apply hover:text-purple-600 text-white
     transition-all duration-300 ease-in-out 
   }
 
   .content-container {
     @apply
-    bg-gray-300 dark:bg-gray-900
+    bg-gray-900
     m-0 px-4 md:px-20 overflow-hidden
     h-full w-full;
   }
@@ -71,7 +71,7 @@
   }
 
   .post-selected {
-    @apply bg-green-400 dark:bg-gray-900
+    @apply bg-gray-900
     shadow-md;
   }
 
@@ -82,12 +82,12 @@
   }
 
   .post-text {
-    @apply text-lg text-left text-gray-800 dark:text-white 
+    @apply text-lg text-left text-white 
     mr-auto whitespace-normal;
   }
 
   .post-owner {
-    @apply text-left font-semibold text-gray-800 dark:text-white mr-2 cursor-pointer;
+    @apply text-left font-semibold text-white mr-2 cursor-pointer;
   }
 
   .avatar-wrapper {
@@ -106,14 +106,14 @@
   }
 
   .timestamp {
-    @apply text-xs text-left font-semibold text-gray-500 dark:text-gray-600 ml-2;
+    @apply text-xs text-left font-semibold text-gray-600 ml-2;
   }
 
   .bottom-bar {
     @apply flex flex-row items-center justify-between 
     fixed left-88 right-8 bottom-2 
     rounded-lg shadow-lg 
-    bg-gray-400 dark:bg-gray-600 px-2
+    bg-gray-600 px-2
     h-12;
   }
 
@@ -121,12 +121,12 @@
     @apply font-semibold w-full
     bg-transparent outline-none 
     ml-0 mr-auto
-    text-gray-500  dark:text-gray-400 placeholder-gray-500
+    text-gray-400 placeholder-gray-500
     cursor-text;
   }
 
   .channel-bar {
-    @apply w-80 h-auto m-0 ml-16 bg-gray-200 dark:bg-gray-800
+    @apply w-80 h-auto m-0 ml-16 bg-gray-800
       overflow-hidden;
   }
 
@@ -143,7 +143,7 @@
 
   .channel-block-text {
     @apply text-lg tracking-wider font-bold 
-    text-gray-600 dark:text-gray-400 
+    text-gray-400 
     mr-auto ml-4 my-auto align-middle;
   }
 
@@ -179,20 +179,17 @@
     @apply text-gray-500 font-semibold tracking-wide
     mr-auto 
     transition duration-300 ease-in-out 
-    hover:text-pink-500 dark:hover:text-gray-500
+    hover:text-gray-500
     cursor-pointer;
   }
+
+  .btn-blog {
+    @apply text-base font-medium rounded-lg p-3 bg-slate-100 text-slate-900;
+  }
+
 }
 
 @tailwind utilities;
-
-/*::-webkit-scrollbar {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-gray-500 dark:bg-green-400;
-}*/
 
 
 @font-face {

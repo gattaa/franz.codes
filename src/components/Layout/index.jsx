@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet"
 
 function Layout({ children }) {
   return (
-    <div className="flex">
+    <div className="flex bg-gray-900">
       <Helmet>
           <meta charSet="utf-8" />
           <title>franz.codes</title>
@@ -13,7 +13,7 @@ function Layout({ children }) {
         </Helmet>
       <SideBar />
       <ContentContainer>  
-        <div class="wotfard">
+        <div className="wotfard">
           {children}
         </div>
       </ContentContainer>

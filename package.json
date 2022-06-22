@@ -24,6 +24,7 @@
     "gatsby": "^4.15.2",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^2.16.1",
+    "gatsby-plugin-manifest": "^4.17.0",
     "gatsby-plugin-mdx": "^3.16.0",
     "gatsby-plugin-mdx-frontmatter": "^0.0.4",
     "gatsby-plugin-react-helmet": "^5.16.0",

@@ -24,6 +24,15 @@ module.exports = {
         offset: -105
       }
   },
-  `gatsby-plugin-react-helmet`
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `franz.codes`,
+      short_name: `franz`,
+      start_url: `/`,
+      icon: 'src/assets/images/gatsby-icon.png',
+    },
+  },
+  `gatsby-plugin-react-helmet`,
   ]
 }
