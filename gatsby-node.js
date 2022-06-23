@@ -6,6 +6,7 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
   
       type MdxFrontmatter {
         description: String 
+        tags: [String]
       }
     `);
   };

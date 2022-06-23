@@ -16,6 +16,8 @@ module.exports = {
         },
         capepallister: "#A06E4A",
         almond: "#EFDCC1",
+        mint: "#BFDCBF",
+        minto: "#9ECA9E"
 
       },
       spacing: {
@@ -23,5 +25,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

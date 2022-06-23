@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import Layout from '../../components/Layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+//TODO: only show if blog tag
 
 
 
@@ -11,8 +12,7 @@ const Comments = props => {
 
   React.useEffect(() => {
     if (typeof window !== "undefined") {
-      const theme = window.localStorage.getItem("dark-theme");
-      const utterancesTheme = theme === "true" ? "github-dark" : "github-light"
+      const utterancesTheme = "github-dark"
       const scriptElement = document.createElement("script")
       scriptElement.setAttribute("src", "https://utteranc.es/client.js")
       scriptElement.setAttribute("crossorigin", "anonymous")
@@ -31,10 +31,10 @@ const Comments = props => {
   )
 }
 
-const H1 = props => <p className='text-4xl text-white' {...props} />
-const P = props => <p className='text-white' {...props} />
-const H2 = props => <p className='text-white text-3xl'/>
-const H3 = props => <p className='text-2xl text-white' {...props} />
+const H1 = props => <p className='text-4xl text-mint' {...props} />
+const P = props => <p className='text-mint' {...props} />
+const H2 = props => <p className='text-mint text-3xl'/>
+const H3 = props => <p className='text-2xl text-mint' {...props} />
 
 
 const components = {
@@ -51,9 +51,9 @@ const BlogPost = ({ data }) => {
       <Layout >
         <div className="flex flex-col flex-grow text-center pt-20 text-gray-100" id="blog">
           <div className=''>
-            <p className=' text-7xl font-bold text-white'>{post.frontmatter.title}</p>
+            <p className=' text-7xl font-bold text-mint'>{post.frontmatter.title}</p>
             <p className='text-3xl'>{post.frontmatter.description}</p>
-            <p className="text-white lowercase mt-2">{post.frontmatter.date} - {post.fields.readingTime.minutes} min read</p>
+            <p className="text-mint lowercase mt-2">{post.frontmatter.date} - {post.fields.readingTime.minutes} min read</p>
           </div>
           <hr className='mt-4 mx-[30%] border-gray-100 '/>
           <div className="pt-5">
