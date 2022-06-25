@@ -36,10 +36,10 @@ const Index = () => {
         </div>
       </div>
 
-      <div className='flex flex-col bg-mint py-20 w-[100%] px-20'> {/* TODO: full screen width */}
+      {/*<div className='flex flex-col bg-mint w-[100%] mx-[-16px] md:mx-[-80px]'> 
         <div className="text-gray-900 text-5xl">non so cosa scrivere qui</div>
         <div className="text-gray-900 text-3xl">spacca però il sito vero?</div>
-      </div>
+      </div>*/}
 
       <div className='md:flex md:flex-row pt-16'>
         <div className="content-center flex-grow place-self-center" id="blog">
