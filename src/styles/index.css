@@ -45,8 +45,7 @@
   .content-container {
     @apply
     bg-gray-900
-    m-0 px-4 md:px-20 overflow-hidden
-    h-full w-full;
+    m-0 px-4 md:px-20 overflow-hidden;
   }
 
   .btn-blog {

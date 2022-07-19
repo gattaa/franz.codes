@@ -49,7 +49,7 @@ const BlogPost = ({ data }) => {
   const post = data.mdx
     return (
       <Layout >
-        <div className="flex flex-col flex-grow text-center pt-20 text-gray-100" id="blog">
+        <div className="flex flex-col flex-grow text-center pt-20 text-mint" id="blog">
           <div className=''>
             <p className=' text-7xl font-bold text-mint'>{post.frontmatter.title}</p>
             <p className='text-3xl'>{post.frontmatter.description}</p>

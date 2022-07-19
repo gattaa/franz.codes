@@ -16,8 +16,9 @@ module.exports = {
   `gatsby-plugin-mdx`,
   'gatsby-plugin-mdx-frontmatter',
   'gatsby-remark-reading-time',
-  /*'gatsby-plugin-image',
-  'gatsby-plugin-sharp',*/
+  'gatsby-plugin-image',
+  'gatsby-plugin-sharp',
+  "gatsby-transformer-sharp",
   {
     resolve: "gatsby-plugin-anchor-links",
       options: {

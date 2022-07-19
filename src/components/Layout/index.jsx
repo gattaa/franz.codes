@@ -1,22 +1,23 @@
 import React from 'react';
 import SideBar from '../SideBar';
-import ContentContainer from '../ContentContainer';
 import { Helmet } from "react-helmet"
 
-function Layout({ children }) {
+function Layout({ children, con }) {
+  let i = children;
+  if(con == "false"){
+    i = <div className="bg-gray-900 overflow-hidden">{children}</div>
+  }else{
+    i = <div className='content-container wotfard'> {children} </div>
+  }
   return (
-    <div className="flex bg-mint">
+    <div className="bg-mint">
       <Helmet>
           <meta charSet="utf-8" />
           <title>franz.codes</title>
           <link rel="canonical" href="https://franz.codes" />
         </Helmet>
       <SideBar />
-      <ContentContainer>  
-        <div className="wotfard">
-          {children}
-        </div>
-      </ContentContainer>
+      {i}
     </div>
   );
 }

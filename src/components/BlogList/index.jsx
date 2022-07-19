@@ -36,9 +36,7 @@ function BlogList({ data }){
       <div className="flex flex-col">
           {
               data.allMdx.nodes.map(node => {
-                  if(node.frontmatter.tags.includes("blog")){  
-                      return <PostInList post={ node } key={node.slug}/>
-                  }
+                return <PostInList post={ node } key={node.slug}/>
               })
           }
       </div>
