@@ -22,6 +22,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "daisyui": "^2.17.0",
+    "embla-carousel-react": "^7.0.0-rc05",
     "gatsby": "^4.15.2",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^2.16.1",
