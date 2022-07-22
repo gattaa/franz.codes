@@ -8,7 +8,7 @@ import BlogList from '../components/BlogList'
 import ProjList from '../components/ProjList';
 import { RoughNotation } from "react-rough-notation";
 import { BiChevronsDown } from 'react-icons/bi';
-import Carousel from '../components/Carousel'
+//import Carousel from '../components/Carousel'
 import Contact from "../components/Contact";
 
 const Hero = ( { children } ) => {

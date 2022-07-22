@@ -1,6 +1,7 @@
 import React from 'react';
 import SideBar from '../SideBar';
 import { Helmet } from "react-helmet"
+import Footer from "../Footer";
 
 function Layout({ children, con }) {
   let i = children;
