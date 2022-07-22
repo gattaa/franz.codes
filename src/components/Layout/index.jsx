@@ -5,9 +5,9 @@ import { Helmet } from "react-helmet"
 function Layout({ children, con }) {
   let i = children;
   if(con == "false"){
-    i = <div className="bg-gray-900 overflow-hidden">{children}</div>
+      i = <div className="bg-gray-900 overflow-hidden">{children}<Footer /></div>
   }else{
-    i = <div className='content-container wotfard'> {children} </div>
+      i = <div className='content-container wotfard'> {children}<Footer /> </div>
   }
   return (
     <div className="bg-mint">
