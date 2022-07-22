@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import {FaGithub} from "react-icons/fa";
 import io from '../../assets/images/gatsby-icon.png'
 
