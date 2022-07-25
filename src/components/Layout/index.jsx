@@ -12,7 +12,9 @@ function Layout({ children, con }) {
   }
   return (
     <div className="bg-mint wotfard min-h-screen transition-all">
-      <Helmet>
+      <Helmet htmlAttributes={{
+          lang: 'en',
+      }}>
           <meta charSet="utf-8" />
           <title>franz.codes</title>
           <link rel="canonical" href="https://franz.codes" />
