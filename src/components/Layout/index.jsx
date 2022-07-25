@@ -1,5 +1,5 @@
 import React from 'react';
-import SideBar from '../SideBar';
+import NavBar from '../NavBar';
 import { Helmet } from "react-helmet"
 import Footer from "../Footer";
 
@@ -8,16 +8,16 @@ function Layout({ children, con }) {
   if(con == "false"){
       i = <div className="bg-gray-900 overflow-hidden">{children}<Footer /></div>
   }else{
-      i = <div className='content-container wotfard'> {children}<Footer /> </div>
+      i = <div className='content-container'> {children}<Footer /> </div>
   }
   return (
-    <div className="bg-mint">
+    <div className="bg-mint wotfard min-h-screen transition-all">
       <Helmet>
           <meta charSet="utf-8" />
           <title>franz.codes</title>
           <link rel="canonical" href="https://franz.codes" />
         </Helmet>
-      <SideBar />
+      <NavBar />
       {i}
     </div>
   );

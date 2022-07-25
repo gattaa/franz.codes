@@ -5,14 +5,14 @@ import { FaUserCircle } from 'react-icons/fa';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import io from '../../assets/images/io.jpg'
 
-const SideBar = () => { 
+const NavBar = () => {
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 50);
     });
   }, []);
-  let scrollclass = scroll ? "shadow-lg bg-mint" : ""
+  let scrollclass = scroll ? "shadow-lg bg-minto" : ""
   return (
     <div className={`sidebar justify-center transition-all duration-500 ${scrollclass}`}  role="navigation">          
       <AnchorLink to="/#page-top" className='sidebar-icon'>
@@ -48,4 +48,4 @@ const SideBarLink = ({ icon, text, link }) => (
 
 const Divider = () => <span className="sidebar-hr" />;
 
-export default SideBar;
+export default NavBar;

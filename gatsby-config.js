@@ -12,6 +12,13 @@ module.exports = {
         path: `${__dirname}/src/posts/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `img`,
+        path: `${__dirname}/src/assets/images/d/`,
+      },
+    },
 
   `gatsby-plugin-mdx`,
   'gatsby-plugin-mdx-frontmatter',

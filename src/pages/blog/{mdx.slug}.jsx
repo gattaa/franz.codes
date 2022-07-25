@@ -27,13 +27,13 @@ const Comments = props => {
     }
   })
   return (
-    <div ref={commentsRef} id="comments" ></div>
+    <div ref={commentsRef} id="comments" className={"min-h-[16rem]"} ></div>
   )
 }
 
 const H1 = props => <p className='text-4xl text-mint' {...props} />
 const P = props => <p className='text-mint' {...props} />
-const H2 = props => <p className='text-mint text-3xl'/>
+const H2 = props => <p className='text-mint text-3xl' {...props}/>
 const H3 = props => <p className='text-2xl text-mint' {...props} />
 
 

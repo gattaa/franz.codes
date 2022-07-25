@@ -18,7 +18,6 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.4",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "embla-carousel-react": "^7.0.0-rc05",
