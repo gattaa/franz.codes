@@ -38,7 +38,7 @@ const Index = () => {
             /></div>
             <RoughNotation className="inline-flex" type="crossed-off" color="purple" strokeWidth="3" show={hover} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}><p className='text-2xl text-mint'>do i actually code tho</p></RoughNotation>
             <div className="mt-1">
-              <a href="https://github.com/gattaa" target={"_blank"} rel="noreferrer">
+              <a href="https://github.com/gattaa" target={"_blank"} rel="noreferrer" aria-label="github">
                 <FaGithub size="25" className='me-link'/>
               </a>
             </div>
