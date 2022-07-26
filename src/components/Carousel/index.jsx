@@ -51,8 +51,8 @@ export default function Carousel() {
     }, [emblaApi])
 
     return (
-        <div className={"w-screen px-10 py-20 text-center"}>
-        <p className='text-mint text-xl uppercase pb-5 font-bold'>projects - 1</p>
+        <div className={"w-screen py-20 text-center"}>
+        <p className='text-mint text-xl uppercase pb-5 font-bold px-10'>projects - 1</p>
         <div className="embla overflow-hidden" ref={emblaRef} id={"projects"}>
             <div className="embla__container text-mint flex text-center">
                 <div className="embla__slide relative basis-full">

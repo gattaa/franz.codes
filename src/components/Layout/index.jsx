@@ -5,7 +5,7 @@ import Footer from "../Footer";
 
 function Layout({ children, con }) {
   let i = children;
-  if(con == "false"){
+  if(con === "false"){
       i = <div className="bg-gray-900 overflow-hidden">{children}<Footer /></div>
   }else{
       i = <div className='content-container'> {children}<Footer /> </div>
@@ -17,6 +17,7 @@ function Layout({ children, con }) {
       }}>
           <meta charSet="utf-8" />
           <title>franz.codes</title>
+          <meta name="description" content={"dev portfolio ;)"}/>
           <link rel="canonical" href="https://franz.codes" />
         </Helmet>
       <NavBar />

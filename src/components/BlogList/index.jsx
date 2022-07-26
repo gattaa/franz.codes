@@ -33,7 +33,7 @@ function BlogList({ data }){
     ) => (
       <div className="flex flex-col">
       <p className='text-mint text-xl uppercase font-bold'>blog - {data.allMdx.totalCount} posts</p>
-      <div className="flex flex-col">
+      <div className="flex flex-col" role={"feed"}>
           {
               data.allMdx.nodes.map(node => {
                 return <PostInList post={ node } key={node.slug}/>

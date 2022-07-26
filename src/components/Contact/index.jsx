@@ -6,7 +6,7 @@ export default function Contact() {
             <div className="text-mint text-2xl lg:text-5xl font-bold">
                 contact
             </div>
-            <a className="text-indigo-500 pt-5" href={"mailto:franzegatta@gmail.com"}>do you really need to?</a>
+            <a className="text-indigo-400 pt-5" href={"mailto:franzegatta@gmail.com"}>do you really need to?</a>
         </div>
     )
 }
