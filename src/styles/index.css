@@ -14,11 +14,21 @@
     @apply fixed top-0 left-0 w-screen h-16 flex flex-row bg-gray-900 z-10;
   }
 
+  .sidebar-photo {
+    @apply relative flex items-center justify-center
+    my-auto
+    hover:bg-mint bg-gray-800
+    text-mint hover:text-gray-800
+    hover:rounded-xl rounded-3xl
+    transition-all duration-300 ease-linear
+    cursor-pointer shadow-lg ;
+  }
+
   .sidebar-icon {
     @apply relative flex items-center justify-center 
     h-12 w-12 ml-2 mr-2 my-auto
-  hover:bg-mint bg-gray-800 
-  text-mint hover:text-gray-800
+    hover:bg-mint bg-gray-800
+    text-mint hover:text-gray-800
     hover:rounded-xl rounded-3xl 
     transition-all duration-300 ease-linear
     cursor-pointer shadow-lg ;

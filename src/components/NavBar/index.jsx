@@ -3,7 +3,7 @@ import { BsFillLightningFill } from 'react-icons/bs';
 import { AiFillNotification, AiFillInstagram } from 'react-icons/ai';
 import { FaUserCircle } from 'react-icons/fa';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import io from '../../assets/images/io.jpg'
+import {StaticImage} from "gatsby-plugin-image";
 
 const NavBar = () => {
   const [scroll, setScroll] = useState(false);
@@ -15,8 +15,8 @@ const NavBar = () => {
   let scrollclass = scroll ? "shadow-lg bg-minto" : ""
   return (
     <div className={`sidebar justify-center transition-all duration-500 ${scrollclass}`}  role="navigation">          
-      <AnchorLink to="/#page-top" className='sidebar-icon'>
-        <img src={ io } alt="io" className='sidebar-icon' />
+      <AnchorLink to="/#page-top" className='sidebar-photo'>
+        <StaticImage src={'../../assets/images/io.jpg'} loading="eager" width={48} height={48} alt="io" className='sidebar-photo p-0' />
       </AnchorLink> 
       <Divider />
       <SideBarIcon icon={<AiFillNotification size="20" />} text="blog" link="/#blog"/>
