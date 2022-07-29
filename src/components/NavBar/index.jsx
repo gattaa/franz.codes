@@ -12,14 +12,14 @@ const NavBar = () => {
       setScroll(window.scrollY > 50);
     });
   }, []);
-  let scrollclass = scroll ? "shadow-lg bg-minto" : ""
+  let scrollclass = scroll ? "shadow-lg bg-opacity-50 bg-gray-900" : ""
   return (
-    <div className={`sidebar justify-center transition-all duration-500 ${scrollclass}`}  role="navigation">          
+    <div className={`sidebar justify-center transition-all duration-500 ${scrollclass}`}  role="navigation">
       <AnchorLink to="/#page-top" className='sidebar-photo'>
         <StaticImage src={'../../assets/images/io.jpg'} loading="eager" width={48} height={48} alt="io" className='sidebar-photo p-0' />
       </AnchorLink> 
       <Divider />
-      <SideBarIcon icon={<AiFillNotification size="20" />} text="blog" link="/#blog"/>
+      <SideBarLink icon={<AiFillNotification size="20" />} text="blog" link="https://blog.franz.codes"/>
       <SideBarIcon icon={<BsFillLightningFill size="20" />} text="projects" link="/#projects"/>
       <SideBarIcon icon={<FaUserCircle size="22" />} text="contact" link="/#contact"/>
       <Divider />

@@ -32,14 +32,14 @@ function BlogList({ data }){
       data
     ) => (
       <div className="flex flex-col">
-      <p className='text-mint text-xl uppercase font-bold'>blog - {data.allMdx.totalCount} posts</p>
-      <div className="flex flex-col" role={"feed"}>
-          {
-              data.allMdx.nodes.map(node => {
-                return <PostInList post={ node } key={node.slug}/>
-              })
-          }
-      </div>
+        <p className='text-mint text-xl uppercase font-bold flex justify-center'>blog - {data.allMdx.totalCount} posts</p>
+        <div className="flex flex-col justify-center" role={"feed"}>
+            {
+                data.allMdx.nodes.map(node => {
+                  return <PostInList post={ node } key={node.slug}/>
+                })
+            }
+        </div>
       </div>
     )}
   />

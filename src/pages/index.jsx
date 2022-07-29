@@ -4,7 +4,6 @@ import Layout from '../components/Layout';
 import Padded from '../components/Padded';
 import { FaGithub } from 'react-icons/fa';
 import Typewriter from 'typewriter-effect';
-import BlogList from '../components/BlogList'
 import { RoughNotation } from "react-rough-notation";
 import { BiChevronsDown } from 'react-icons/bi';
 import Carousel from '../components/Carousel'
@@ -54,13 +53,6 @@ const Index = () => {
         <div className="text-gray-900 text-7xl font-bold">non so cosa scrivere qui</div>
         <div className="text-gray-900 text-5xl">spacca però il sito vero?</div>
       </Hero>
-      <Padded className="">
-        <div className='pt-24'>
-          <div className="content-center flex-grow place-self-center" id="blog">
-            <BlogList/>
-          </div>
-        </div>
-      </Padded>
      <Carousel/>
       <Contact/>
     </Layout>
