@@ -16,7 +16,7 @@ const NavBar = () => {
   return (
     <div className={`sidebar justify-center transition-all duration-500 ${scrollclass}`}  role="navigation">
       <AnchorLink to="/#page-top" className='sidebar-photo'>
-        <StaticImage src={'../../assets/images/io.jpg'} loading="eager" width={48} height={48} alt="io" className='sidebar-photo p-0' />
+        <StaticImage src={'../../assets/images/io.jpg'} loading="eager" width={48} height={48} alt="io" className='sidebar-photo' imgClassName={"die-sidebar-photo"} />
       </AnchorLink> 
       <Divider />
       <SideBarLink icon={<AiFillNotification size="20" />} text="blog" link="https://blog.franz.codes"/>

@@ -19,10 +19,6 @@ module.exports = {
         path: `${__dirname}/src/assets/images/d/`,
       },
     },
-
-  `gatsby-plugin-mdx`,
-  'gatsby-plugin-mdx-frontmatter',
-  'gatsby-remark-reading-time',
   'gatsby-plugin-image',
   'gatsby-plugin-sharp',
   "gatsby-transformer-sharp",

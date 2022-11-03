@@ -2,17 +2,17 @@ import React, { useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import {RoughNotation} from "react-rough-notation";
-import {Link, useStaticQuery, graphql} from "gatsby";
+import {useStaticQuery, graphql} from "gatsby";
 
 function Slide( { title, description, link, image, time, data } ){
     const a = getImage(data.find(b => b.name === image))
     const [hover, setHover] = React.useState(false)
-    return ( <Link to={link} key={title}>
+    return ( <a href={link} key={title} rel={"noreferrer"} target={"_blank"}>
         <div className="" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
             <figure><GatsbyImage
                 image={a}
                 alt={title}
-                className="md:w-[80%]"/></figure>
+                /></figure>
             <div className="pt-4">
                 <p className="text-minto">{time}</p>
 
@@ -25,10 +25,10 @@ function Slide( { title, description, link, image, time, data } ){
                 <p>{description}</p>
             </div>
         </div>
-    </Link> )
+    </a> )
 }
 
-export default function Carousel() {
+export default function qCarousel() {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center", startIndex: 2 })
     const data = useStaticQuery(
         graphql`query{
@@ -60,7 +60,7 @@ export default function Carousel() {
                 </div>
                 <div className="embla__slide relative basis-full">?</div>
                 <div className="embla__slide relative basis-full">
-                   <Slide data={odiolavita} title={"tristezaensemble.com"} link={`/projects/tristeza`} image={'tristeza'} time={"2019-NOW"} description={`theatre company's website`}/>
+                   <Slide data={odiolavita} title={"tristezaensemble.com"} link={`https://www.tristezaensemble.com`} image={'tristeza'} time={"2019-NOW"} description={`theatre company's website`}/>
                 </div>
                 <div className="embla__slide relative basis-full">?</div>
                 <div className="embla__slide relative basis-full">?</div>

@@ -18,18 +18,13 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
     "embla-carousel-react": "^7.0.0-rc05",
     "gatsby": "^4.15.2",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^2.16.1",
     "gatsby-plugin-manifest": "^4.17.0",
-    "gatsby-plugin-mdx": "^3.16.0",
-    "gatsby-plugin-mdx-frontmatter": "^0.0.4",
     "gatsby-plugin-react-helmet": "^5.16.0",
     "gatsby-plugin-sharp": "^4.16.1",
-    "gatsby-remark-reading-time": "^1.1.0",
     "gatsby-source-filesystem": "^4.16.0",
     "gatsby-transformer-sharp": "^4.17.0",
     "react": "^18.1.0",

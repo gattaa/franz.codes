@@ -14,7 +14,7 @@ function Layout({ children, con }) {
     <div className="bg-mint wotfard min-h-screen transition-all">
       <Helmet htmlAttributes={{
           lang: 'en',
-      }}>
+      }} bodyAttributes={{class: "bg-gray-900"}}>
           <meta charSet="utf-8" />
           <title>franz.codes</title>
           <meta name="description" content={"dev portfolio ;)"}/>

@@ -27,7 +27,7 @@ export default function Contact() {
                             <textarea value={message} onChange={e => setMessage(e.target.value)} className="text-gray-900  mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" rows="3" placeholder={"why u so dumb"} required minLength={100}></textarea>
                         </label>
 
-                        <a href={"mailto:franzegatta@gmail.com?subject=" + subject + "&body=" + message} className="py-3 px-5 text-sm font-medium text-center text-gray-900 rounded-lg bg-mint hover:bg-primary-800 focus:border-gray-500 focus:ring-0">
+                        <a href={"mailto:franzegatta@gmail.com?subject=" + subject + "&body=" + message + ", from " + name} className="py-3 px-5 text-sm font-medium text-center text-gray-900 rounded-lg bg-mint hover:bg-primary-800 focus:border-gray-500 focus:ring-0">
                             go!
                         </a>
 
